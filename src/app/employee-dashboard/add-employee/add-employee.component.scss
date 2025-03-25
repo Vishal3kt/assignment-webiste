@@ -1,0 +1,31 @@
+input {
+  width: 100%;
+}
+
+.form-data {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23.19px;
+}
+
+::placeholder,
+select {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 23.19px;
+}
+
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+  button {
+    background: #073ba9;
+    color: #ffffff;
+    width: 60%;
+  }
+}

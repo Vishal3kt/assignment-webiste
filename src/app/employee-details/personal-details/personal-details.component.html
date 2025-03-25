@@ -1,0 +1,192 @@
+<div class="personal-info-container">
+    <div class="section-header">
+        <span><i class="ri-user-line"></i> Personal Information</span>
+        <img src="../../../assets/Button.png" alt="" (click)="openEditOffcanvas()">
+    </div>
+
+    <div class="info-grid">
+        <div class="info-item">
+            <span class="label">Name</span>
+            <span class="value">Kevin John</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Date of Birth</span>
+            <span class="value">08 Nov 1996</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Nationality</span>
+            <span class="value">Indian</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Aadhar Number</span>
+            <span class="value">8524 8962 1235</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Father Name</span>
+            <span class="value">John</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Father DOB</span>
+            <span class="value">15 Jan 1982</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Religion</span>
+            <span class="value">Hindu</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Pan Number</span>
+            <span class="value">HPBT8813J</span>
+        </div>
+    </div>
+</div>
+
+<div class="contact-address-container">
+    <div class="section-header">
+        <span><i class="ri-map-pin-line"></i> Contact Address</span>
+        <i class="fa fa-edit" (click)="openEditOffcanvas()"></i>
+    </div>
+
+    <div class="address-section">
+        <div class="address-title">Current Address</div>
+        <div class="address-grid">
+            <div class="address-item">
+                <span class="label">Residence Number</span>
+                <span class="value">#107</span>
+            </div>
+            <div class="address-item">
+                <span class="label">Residence Name</span>
+                <span class="value">Galaxy Apartment</span>
+            </div>
+            <div class="address-item">
+                <span class="label">Road/Street</span>
+                <span class="value">Maruthi Nagar</span>
+            </div>
+            <div class="address-item">
+                <span class="label">Locality/Area</span>
+                <span class="value">Madiwala</span>
+            </div>
+            <div class="address-item">
+                <span class="label">City/District</span>
+                <span class="value">Bangalore</span>
+            </div>
+            <div class="address-item">
+                <span class="label">State</span>
+                <span class="value">Karnataka</span>
+            </div>
+            <div class="address-item">
+                <span class="label">Pincode</span>
+                <span class="value">560061</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="editOffcanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Add Personal Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form [formGroup]="editForm">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Name*</label>
+                    <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Date of Birth*</label>
+                    <input type="date" class="form-control" formControlName="dob">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Father Name*</label>
+                    <input type="text" class="form-control" formControlName="fatherName"
+                        placeholder="Enter Father Name">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Father Date of Birth*</label>
+                    <input type="date" class="form-control" formControlName="fatherDob">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Mother Name*</label>
+                    <input type="text" class="form-control" formControlName="motherName"
+                        placeholder="Enter Mother Name">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Mother Date of Birth*</label>
+                    <input type="date" class="form-control" formControlName="motherDob">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Marital Status*</label>
+                    <select class="form-select" formControlName="maritalStatus">
+                        <option>Select Status</option>
+                    </select>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Nationality</label>
+                    <input type="text" class="form-control" formControlName="nationality" placeholder="Ex: Indian">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Religion</label>
+                    <input type="text" class="form-control" formControlName="religion" placeholder="Ex: Hindu">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Cast</label>
+                    <input type="text" class="form-control" formControlName="cast" placeholder="Ex: Lingayat">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Category</label>
+                    <select class="form-select" formControlName="category">
+                        <option>Select Your Category</option>
+                    </select>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Are you Physically Disabled?</label>
+                    <select class="form-select" formControlName="disability">
+                        <option>Select Status</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Aadhar Number*</label>
+                    <input type="text" class="form-control" formControlName="aadhar" placeholder="Enter Aadhar Number">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Pan Number*</label>
+                    <input type="text" class="form-control" formControlName="pan" placeholder="Enter Pan Number">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Passport Number*</label>
+                    <input type="text" class="form-control" formControlName="passport"
+                        placeholder="Enter Passport Number">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="form-label">Passport Issue Date</label>
+                    <input type="date" class="form-control" formControlName="passportIssueDate">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="offcanvas-footer">
+        <button type="button" class="btn btn-primary" (click)="updateDetails()">Submit</button>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="sidebar">
+        <h2 class="section-title">Employee Details</h2>
+        <ul class="menu-list">
+            <li>
+                <a routerLink="personal-details" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    Personal Details
+                </a>
+            </li>
+            <li><a routerLink="emergency-contact" routerLinkActive="active">Emergency Contact</a></li>
+            <li><a routerLink="banking" routerLinkActive="active">Banking</a></li>
+            <li><a routerLink="nominee" routerLinkActive="active">Nominee</a></li>
+            <li><a routerLink="qualification" routerLinkActive="active">Qualification</a></li>
+            <li><a routerLink="experience" routerLinkActive="active">Experience</a></li>
+            <li><a routerLink="salary-benefits" routerLinkActive="active">Salary Benefits</a></li>
+            <li><a routerLink="employment-details" routerLinkActive="active">Employment Details</a></li>
+            <li><a routerLink="exit-details" routerLinkActive="active">Exit Details</a></li>
+            <li><a routerLink="documents" routerLinkActive="active">Documents</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

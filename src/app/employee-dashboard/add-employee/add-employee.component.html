@@ -1,0 +1,118 @@
+<form class="form-data" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Salutation<span class="text-danger">*</span></label>
+            <select formControlName="salutation" class="form-select">
+                <option value="" selected>Ex: Mr, Miss...</option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Name (as per Aadhar)<span class="text-danger">*</span></label>
+            <input type="text" formControlName="name" class="form-control" placeholder="Enter Your Name">
+        </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Mobile Number<span class="text-danger">*</span></label>
+            <input type="tel" formControlName="mobile" class="form-control" placeholder="Enter Mobile Number">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Email Id<span class="text-danger">*</span></label>
+            <input type="email" formControlName="email" class="form-control" placeholder="Ex: kevin@gmail.com">
+        </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Aadhar Number<span class="text-danger">*</span></label>
+            <input type="text" formControlName="aadhar" class="form-control" placeholder="Enter Aadhar Number">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Gender<span class="text-danger">*</span></label>
+            <select formControlName="gender" class="form-select">
+                <option value="" selected>Select Your Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Institutions<span class="text-danger">*</span></label>
+            <input type="text" formControlName="institutions" class="form-control" placeholder="Ex: Jain University">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Campus<span class="text-danger">*</span></label>
+            <input type="text" formControlName="campus" class="form-control" placeholder="Ex: Jayanagar">
+        </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Academic Type<span class="text-danger">*</span></label>
+            <select formControlName="academicType" class="form-select">
+                <option value="" selected>Select Your Academic Type</option>
+                <option value="Faculty">Faculty</option>
+                <option value="Staff">Staff</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Faculty<span class="text-danger">*</span></label>
+            <input type="text" formControlName="faculty" class="form-control" placeholder="Ex: Employee">
+        </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Department<span class="text-danger">*</span></label>
+            <input type="text" formControlName="department" class="form-control" placeholder="Ex: Communications">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Designation<span class="text-danger">*</span></label>
+            <input type="text" formControlName="designation" class="form-control" placeholder="Ex: UI UX Designer">
+        </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Grade<span class="text-danger">*</span></label>
+            <select formControlName="grade" class="form-select">
+                <option value="" selected>Select Your Grade</option>
+                <option value="Grade 1">Grade 1</option>
+                <option value="Grade 2">Grade 2</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Employee Category<span class="text-danger">*</span></label>
+            <select formControlName="employeeCategory" class="form-select">
+                <option value="" selected>Select Your Employment Category</option>
+                <option value="Teaching">Teaching</option>
+                <option value="Non-Teaching">Non-Teaching</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-6">
+            <label class="form-label">Employee Type<span class="text-danger">*</span></label>
+            <input type="text" formControlName="employeeType" class="form-control" placeholder="Ex: Contract">
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Reporting Authority<span class="text-danger">*</span></label>
+            <select formControlName="reportingAuthority" class="form-select">
+                <option value="" selected>Select Your Reporting Authority</option>
+                <option value="Director">Director</option>
+                <option value="HOD">Head of Department</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="d-flex mt-4 btn-wrapper">
+        <button type="submit" class="btn btn-primary px-4">Submit</button>
+    </div>
+</form>

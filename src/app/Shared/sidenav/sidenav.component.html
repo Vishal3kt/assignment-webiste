@@ -1,0 +1,44 @@
+<div class="sidenav">
+    <img routerLink="/" class="logo" src="../../../assets/Logo-jgi.png" alt="Logo">
+
+    <ul class="nav">
+        <li routerLink="/" class="nav-item" [class.active]="activeMenu === 'dashboard'"
+            (click)="setActive('dashboard')">
+            <a class="nav-link">
+                <i class="ri-dashboard-line"></i> <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li class="nav-item" [class.active]="activeMenu === 'requisitions'" (click)="setActive('requisitions')">
+            <a class="nav-link" routerLink="/employee-dashboard/employee-list">
+                <i class="ri-bank-card-line"></i> <span>Requisitions</span>
+            </a>
+        </li>
+
+        <li class="nav-item" [class.active]="activeMenu === 'employees'" (click)="toggleEmployees()">
+            <a class="nav-link d-flex justify-content-between" routerLink="/employee-dashboard/employee-list">
+                <span><i class="ri-group-line"></i> Employees</span>
+                <i [ngClass]="{'ri-arrow-down-s-line': !showEmployees, 'ri-arrow-up-s-line': showEmployees}"></i>
+            </a>
+        </li>
+        <ul *ngIf="showEmployees" class="submenu">
+            <li class="nav-item" [class.active]="activeMenu === 'employee-list'" (click)="setActive('employee-list')">
+                <a class="nav-link" routerLink="/employee-dashboard/employee-list">
+                    <i class="ri-user-line"></i> Employee List
+                </a>
+            </li>
+        </ul>
+
+        <li class="nav-item" [class.active]="activeMenu === 'verification'" (click)="setActive('verification')">
+            <a class="nav-link" routerLink="/employee-dashboard/employee-list">
+                <i class="ri-corner-left-up-line"></i> <span>Verification</span>
+            </a>
+        </li>
+
+        <li class="nav-item" [class.active]="activeMenu === 'admin'" (click)="setActive('admin')">
+            <a class="nav-link" routerLink="/employee-dashboard/employee-list">
+                <i class="ri-survey-line"></i> <span>Admin</span>
+            </a>
+        </li>
+    </ul>
+</div>

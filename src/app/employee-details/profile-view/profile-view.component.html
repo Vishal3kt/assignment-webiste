@@ -1,0 +1,39 @@
+<div class="top-section">
+    <div class="header-content">
+        <h2 class="name">Employees List</h2>
+        <button style="margin:12px;" class="btn btn-primary" (click)="goToEmployeeList()">
+            <i class="ri-arrow-left-line"></i> Back To Employee List
+        </button>
+    </div>
+
+    <div class="container profile-container">
+        <div class="row align-items-center">
+            <div class="col-md-4 d-flex align-items-center">
+                <div class="profile-initials">
+                    {{ employee?.firstName.charAt(0) }}{{ employee?.lastName.charAt(0) }}
+                </div>
+                <div class="ms-4">
+                    <h4 class="mb-1 name">Mr. {{ employee?.firstName }} {{ employee?.lastName }}</h4>
+                    <p class="text-muted name-details">{{ employee?.designation }}</p>
+                    <p class="text-muted name-details">{{ employee?.email }}</p>
+                    <p class="text-muted name-details">{{ employee?.phone }}</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 list">
+                <p class="d-flex"><span class="text-muted label">Employee ID</span> <strong>: 162025</strong></p>
+                <p class="d-flex"><span class="text-muted label">Blood Group</span> <strong>: A+ ve</strong></p>
+                <p class="d-flex"><span class="text-muted label">Gender</span> <strong>: Male</strong></p>
+                <p class="d-flex"><span class="text-muted label">Birthday</span> <strong>: 08 Nov 1996</strong></p>
+                <p class="d-flex"><span class="text-muted label">Aadhar Number</span> <strong>: 8524 8962</strong></p>
+            </div>
+
+            <div class="col-md-3" style="align-self: baseline;">
+                <p class="d-flex"><span class="text-muted label">Joining Date</span> <strong>: 08 Nov 2024</strong></p>
+                <p class="d-flex"><span class="text-muted label">Department</span> <strong>: Communications</strong></p>
+                <p class="d-flex"><span class="text-muted label">Reports to</span> <strong>: Yugeshan</strong></p>
+            </div>
+
+        </div>
+    </div>
+</div>
